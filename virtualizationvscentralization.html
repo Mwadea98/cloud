@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta Tag -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Cloud Technologies</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<!-- FontAwesome CSS -->
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<div class="navigation-wrap bg-light start-header start-style">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<nav class="navbar navbar-expand-md navbar-light">
+								
+								<a class="navbar-brand" href="index.html"><h4>Cloud<span style="color: #66f">Technologies</span></h4></a>
+								
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+								</button>
+								
+								<div class="collapse navbar-collapse" id="navbarSupportedContent">
+									<ul class="navbar-nav ml-auto py-4 py-md-0">
+										<li class="nav-item"><a class="nav-link" href="virtualizationvscentralization.html">Virtualization vs Centralization</a></li>
+										<li class="nav-item"><a class="nav-link" href="datacenter.html">Data Center</a></li>
+										<li class="nav-item"><a class="nav-link" href="kubernetes.html">Kubernetes</a></li>
+										<li class="nav-item"><a class="nav-link" href="tutorial.html">Tutorial</a></li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="virtual mt-5">
+				<div class="container">
+					<h1>What is Virtualization?</h1>
+					<p>It is a general approach for getting out of in-house hardware assets. In the beginning, this technique was a revelation because it allowed developers to run multiple OS(Operating system) in different VMs (virtuals machines) all running on the same host. This dissolved the need for extra hardware resources. </p>
+					<p>Let’s have a look at some Pros-</p>
+					<ul>
+						<li>Multiple OS can run at the same time</li>
+						<li>Easy recovery and maintenance in a condition of failure case</li>
+						<li>Due to less usage/need for infrastructure total cost of ownership came down</li>
+					</ul>
+					<div class="d-flex align-items-center justify-content-center">
+						<img src="img/virtualization.jpg" class="img-fluid">
+					</div>
+					<p>In the above diagram, you can see there one host OS on which there are three guest OS systems running, which are VMs.</p>
+					<p>Though Virtualization also has some shortcomings. Running multiple VMs at the same time on Host OS leads to performance breakdown/degradation. The reason behind this is because the guest OS runs on the top of host OS, which will have its own kernel and dependencies, this takes up a large mass of system resources like Hard Disk, Processor and RAM.
+					</p>
+					<p>
+						These are some Cons of Virtualization –
+					</p>
+					<ul>
+						<li>Unstable performance because of running multiple VMs</li>
+						<li>The efficiency of Hypervisors is not as good as the host OS</li>
+						<li>Long boot-up time </li>
+					</ul>
+					<h1>What is Containerization?</h1>
+					<p>Containerization is a strategy of bringing Virtualization to the OS-level. Though Virtualization is an abstraction to the hardware, containerization brings abstraction of OS. Containerization is more efficient because there is no guest OS to utilize a host’s OS and do not have to share relevant libraries and resources, unlike virtual machines. Containers works on bare-metal systems, cloud instances, and virtual machines, across Linux, Windows, and Mac. Containerization is a lightweight alternative to full machine virtualization that involves encapsulating an application in a container with its OS. Containerization boots up in a fraction of seconds; this is because Container shares host OS and holds only those application which is related to binaries and libraries. </p>
+					<div class="d-flex align-items-center justify-content-center">
+						<img src="img/containerization.jpg" class="img-fluid">
+					</div>
+					<p>
+						In the above diagram, as you see, there is one host OS shared by all containers. Containers only contain applications specific to libraries that are isolated from other containers leading to no wastage of resources. This makes the container deployments faster and more reliable.
+					</p>
+					<h1>Comparison</h1>
+					<table class="table table-striped table-bordered table-hover table-condensed">
+						<thead>
+							<tr>
+								<th>Area</th>
+								<th>Virtualization</th>
+								<th>Containerization</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Isolation</td>
+								<td>Provides complete isolation from the host operating system and the other VMs	</td>
+								<td>Typically provides lightweight isolation from the host and other containers, but doesn’t provide as strong a security boundary as a VM</td>
+							</tr>
+							<tr>
+								<td>Operating System</td>
+								<td>Runs a complete operating system including the kernel, thus requiring more system resources such as CPU, memory, and storage</td>
+								<td>Runs the user-mode portion of an operating system, and can be tailored to contain just the needed services for your app using fewer system resources</td>
+							</tr>
+							<tr>
+								<td>Guest compatibility	</td>
+								<td>Runs just about any operating system inside the virtual machine	</td>
+								<td>Runs on the same operating system version as the host</td>
+							</tr>
+							<tr>
+								<td>Deployment</td>
+								<td>Deploy individual VMs by using Hypervisor software	</td>
+								<td>Deploy individual containers by using Docker or deploy multiple containers by using an orchestrator such as Kubernetes</td>
+							</tr>
+							<tr>
+								<td>Persistent storage</td>
+								<td>Use a Virtual Hard Disk (VHD) for local storage for a single VM or a Server Message Block (SMB) file share for storage shared by multiple servers</td>
+								<td>Use local disks for local storage for a single node or SMB for storage shared by multiple nodes or servers</td>
+							</tr>
+							<tr>
+								<td>Load balancing</td>
+								<td>Virtual machine load balancing is done by running VMs in other servers in a failover cluster	</td>
+								<td>An orchestrator can automatically start or stop containers on cluster nodes to manage changes in load and availability.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</main>
+		<!-- jQuery first & then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<!-- Custom JS -->
+		<script src="js/main.js"></script>
+	</body>
+</html>

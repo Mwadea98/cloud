@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta Tag -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Cloud Technologies</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<!-- FontAwesome CSS -->
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<div class="navigation-wrap bg-light start-header start-style">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<nav class="navbar navbar-expand-md navbar-light">
+								
+								<a class="navbar-brand" href="index.html"><h4>Cloud<span style="color: #66f">Technologies</span></h4></a>
+								
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+								</button>
+								
+								<div class="collapse navbar-collapse" id="navbarSupportedContent">
+									<ul class="navbar-nav ml-auto py-4 py-md-0">
+										<li class="nav-item"><a class="nav-link" href="virtualizationvscentralization.html">Virtualization vs Centralization</a></li>
+										<li class="nav-item"><a class="nav-link" href="datacenter.html">Data Center</a></li>
+										<li class="nav-item"><a class="nav-link" href="kubernetes.html">Kubernetes</a></li>
+										<li class="nav-item"><a class="nav-link" href="tutorial.html">Tutorial</a></li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="virtual mt-5">
+				<div class="container">
+					<h1 class="mb-3">What is Docker?</h1>
+					<p>Docker is currently the most popular container platform. Docker appeared on the market at the right time, and was open source from the beginning, which likely led to its current market domination. 30% of enterprises currently use Docker in their AWS environment and that number continues to grow.</p>
+					<ul>
+						<li>Docker is a tool designed to make it easier to create, deploy and run applications using containers</li>
+						<li>Docker containers are lightweight alternatives to virtual machines and it uses the host OS</li>
+						<li>You don't have to pre-allocate any RAM in containers</li>
+					</ul>
+					<h2>Explanation</h2>
+					<p>Docker virtualize the operating system (your standard libraries, packages, etc.) itself, not the hardware. Now, instead of providing virtual hardware to a VM, you provide a virtual OS to your application. You can run multiple applications and impose limitations on their resource utilization if you want, and each application will run oblivious to the hundreds of other containers it is running alongside.</p>
+					<h2>What is Docker used for?</h2>
+					<p>When most people talk about Docker they are talking about Docker Engine, the runtime that allows you to build and run containers. But before you can run a Docker container they must be built, starting with a Docker File. The Docker File defines everything needed to run the image including the OS network specifications, and file locations. Now that you have a Docker file, you can build a Docker Image which is the portable, static component that gets run on the Docker Engine. And if you don’t want to start from scratch Docker even has a service called Docker Hub, where you can store and share images. </p>
+					<div class="d-flex align-items-center justify-content-center">
+						<img src="img/docker.png" class="img-fluid">
+					</div>
+					<h1>What is Kubernetes?</h1>
+					<p>Kubernetes takes containerization technology. It allows us to run containers across multiple compute nodes (these can be VMs or a bare-metal servers). Once Kubernetes takes control over a cluster of nodes, containers can then spun up or torn down depending upon our need at any given time.</p>
+					<h2 class="mt-3">Overview</h2>
+					<p>There are two basic concepts worth knowing about a Kubernetes cluster. The first is node. This is a common term for VMs and/or bare-metal servers that Kubernetes manages. The second term is pod, which is a basic unit of deployment in Kubernetes. A pod is a collection of related Docker containers that need to coexist. For example, your web server may need to be deployed with a redis caching server so you can encapsulate the two of them into a single pod. Kubernetes deploys both of them side by side. If it makes matters easier for you, you can totally picture a pod consisting of a single container and that would be fine.</p>
+
+					<p>Coming back to the nodes, there are two types of nodes. One is the Master Node, where the heart of Kubernetes is installed. It controls the scheduling of pods across various worker nodes (a.k.a just nodes), where your application actually runs. The master node’s job is to make sure that the desired state of the cluster is maintained.</p>
+					<div class="d-flex align-items-center justify-content-center">
+						<img src="img/kubernetes.png" class="img-fluid">
+					</div>
+
+					<h2>Why use Kubernetes?</h2>
+					<p>Kubernetes has become the standard orchestration platform for containers. All the major cloud providers support it, making it the logical choice for organizations looking to move more applications to the cloud.</p>
+
+					<p>Kubernetes provides a common framework to run distributed systems so development teams have consistent, immutable infrastructure from development to production for every project. Kubernetes can manage scaling requirements, availability, failover, deployment patterns, and more. <br> Kubernetes’ capabilities include:</p>
+					<ul>
+						<li>Service and process definition</li>
+						<li>Service discovery and load balancing</li>
+						<li>Storage orchestration</li>
+						<li>Container-level resource management</li>
+						<li>Automated deployment and rollback</li>
+						<li>Container health management</li>
+						<li>Secrets and configuration management</li>
+					</ul>
+
+					<h1>Strength & Weakness</h1>
+					<table class="table table-striped table-bordered table-hover table-condensed">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Kubernetes</th>
+								<th>Docker</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Installation & Cluster Configurations</td>
+								<td>Setting up the cluster is challenging and complicated. <br>Cluster strength is stronger.</td>
+								<td>Setting up the cluster is simple. <br> Cluster strength is not strong</td>
+							</tr>
+							<tr>
+								<td>GUI</td>
+								<td>Provides a GUI (Kubernetes dashboard)</td>
+								<td>There is no GUI available</td>
+							</tr>
+							<tr>
+								<td>Scalability</td>
+								<td>Scaling up is easy</td>
+								<td>Scaling up is 5x faster than kubernetes</td>
+							</tr>
+							<tr>
+								<td>Auto Scaling</td>
+								<td>Based on server traffic, containers will be scaled automatically.</td>
+								<td>Scaling up or scaling down needs to be done manually.</td>
+							</tr>
+							<tr>
+								<td>Load Balancing</td>
+								<td>Manual configuration needed for load balancing traffic.</td>
+								<td>Swarm does auto load balancing</td>
+							</tr>
+							<tr>
+								<td>Rollbacks</td>
+								<td>Automatic rollbacks in case of failure</td>
+								<td>No automatic rollbacks</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</main>
+		<!-- jQuery first & then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<!-- Custom JS -->
+		<script src="js/main.js"></script>
+	</body>
+</html>

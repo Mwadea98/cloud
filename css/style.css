@@ -1,0 +1,27 @@
+.nav-link{
+  color: #212121 !important;
+  font-weight: 500;
+  transition: all 200ms linear;
+}
+.nav-item:hover .nav-link{
+  color: #66f !important;
+}
+.nav-item.active .nav-link{
+  color: #777 !important;
+}
+.nav-link {
+  position: relative;
+  padding: 5px 10px !important;
+  display: inline-block;
+}
+.bg-light{
+  background-color: #fff !important;
+  transition: all 200ms linear
+}
+.start-header{
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+}
+
+.virtual ul{
+  padding: 20px;
+}
